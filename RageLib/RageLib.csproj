@@ -48,13 +48,10 @@
     <Compile Include="Compression\DeflateCompression.cs" />
     <Compile Include="Compression\ICompressionAlgorithm.cs" />
     <Compile Include="Helpers\HashSearch.cs" />
-    <Compile Include="Helpers\DDSIO.cs" />
-    <Compile Include="Helpers\TextureCompression.cs" />
     <Compile Include="Data\DataReader.cs" />
     <Compile Include="Data\DataWriter.cs" />
     <Compile Include="Data\Endianess.cs" />
     <Compile Include="Hash\Jenkins.cs" />
-    <Compile Include="Helpers\TextureConvert.cs" />
     <Compile Include="Cryptography\IEncryptionAlgorithm.cs" />
     <Compile Include="Cryptography\AesEncryption.cs" />
     <Compile Include="Data\PartialStream.cs" />
@@ -94,12 +91,6 @@
     <Compile Include="ResourceWrappers\Texture\ITexture.cs" />
     <Compile Include="ResourceWrappers\Texture\ITextureDictionary.cs" />
     <Compile Include="ResourceWrappers\Texture\ITextureDictionaryFile.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Libraries\DirectXTex\DirectXTex.vcxproj">
-      <Project>{755ab64b-16b4-4c90-aa3b-bff448e5a21e}</Project>
-      <Name>DirectXTex</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
