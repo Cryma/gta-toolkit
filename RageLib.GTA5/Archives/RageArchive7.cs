@@ -323,12 +323,13 @@ namespace RageLib.GTA5.Archives
             ent_str.Read(ent_buf, 0, ent_buf.Length);
 
             if (Encryption == RageArchiveEncryption7.AES)
-                ent_buf = AesEncryption.EncryptData(ent_buf, aesKey);
-            if (Encryption == RageArchiveEncryption7.NG)
             {
-                Encryption = RageArchiveEncryption7.None;
+                ent_buf = AesEncryption.EncryptData(ent_buf, aesKey);
             }
-
+            else if (Encryption == RageArchiveEncryption7.NG)
+            {
+                ent_buf = GTA5Crypto.Encrypt(ent_buf, ngKey);
+            }
 
             // names...
             var n_str = new MemoryStream();
